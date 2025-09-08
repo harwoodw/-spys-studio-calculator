@@ -1,7 +1,6 @@
 import { defineConfig } from 'vite'
-import react from '@vitejs/plugin-react'
 
-// We’re not using TypeScript here. This is simple React + Vite.
+// Simple Vite config without @vitejs/plugin-react (JSX is handled by esbuild)
 export default defineConfig({
-  plugins: [react()]
+  define: { 'process.env': {} }
 })
