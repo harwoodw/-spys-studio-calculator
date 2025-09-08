@@ -1,6 +1,0 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
-
-/* Optional: tiny polish */
-html, body, #root { height: 100%; }
