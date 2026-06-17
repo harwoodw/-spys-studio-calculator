@@ -215,8 +215,9 @@ export default function StudioBudgetEstimator() {
         <div style={{ ...card, marginTop: 20 }}>
           <h2 style={sectionTitle}>A · Contractor Scope</h2>
           <p style={{ fontSize: 13, lineHeight: 1.55, marginTop: -6, marginBottom: 12, color: BRAND.body }}>
-            Work the general contractor performs or subs out — shown loaded (labor, their
-            materials, and management fee). The regional cost index is applied here.
+            Work the general contractor performs or subs out, shown as fully loaded totals
+            (labor, materials, and management fee included). The regional cost index is
+            applied to this section.
           </p>
           {b.sectionA.map((r) => (
             <Row key={r.key} label={r.label} value={r.value} />
@@ -326,6 +327,11 @@ export default function StudioBudgetEstimator() {
             <li><b>Permitting and architectural fees</b></li>
             <li><b>Site access challenges</b></li>
             <li><b>High-end finish upgrades</b></li>
+            <li>
+              <b>Acoustic treatment</b> — not included in this estimate. Treatment packages
+              typically range from $5,000 on a smaller room to $20,000 or more depending on
+              room size, diffusion, and finish level.
+            </li>
           </ul>
           <p style={{ fontSize: 13.5, lineHeight: 1.6, margin: 0 }}>
             Your actual budget may be higher depending on these factors. On a real 600 sqft

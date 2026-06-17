@@ -54,9 +54,12 @@ export const CONFIG = {
   // state factor applies the regional correction. LABOR-BEARING.
   groundUpPerSqft: 85,
 
-  // --- Acoustic treatment + finish electronics: FIXED-ISH (3G) --------------
-  // GIK traps, panels, diffusers, cloud, lighting, sconces, passthrough,
-  // putty pads, air terminals, WallCats. Owner-purchased — NATIONAL.
+  // --- Finish electronics + low-voltage package: FIXED-ISH (3G) -------------
+  // Audio receptacles, low-voltage wiring, headphone passthrough, WallCats,
+  // network drops, lighting/sconces and similar finish items. Owner-purchased
+  // — NATIONAL. NOTE: acoustic treatment (bass traps, diffusers, panels) is
+  // NOT in this number — it is excluded and named in the disclaimer (4B),
+  // since treatment scope ranges ~$5k–$20k+ by room size and finish level.
   treatmentFlat: 5000,
 
   // --- Contingency (4C) -----------------------------------------------------
@@ -134,7 +137,7 @@ export function computeBudget({ area, height, buildType, doors, windows, stateCo
     { key: "windowUnits", label: `Soundproof windows (${windows} × $${CONFIG.windowEach.toLocaleString()})`, value: windowUnits },
     { key: "ervUnit", label: "ERV unit", value: CONFIG.mechanical.ervUnit },
     { key: "dehumidifier", label: "Santa Fe dehumidifier", value: CONFIG.mechanical.dehumidifier },
-    { key: "treatment", label: "Acoustic treatment + finish electronics package", value: CONFIG.treatmentFlat },
+    { key: "treatment", label: "Finish electronics and low-voltage package", value: CONFIG.treatmentFlat },
   ];
   const sectionBTotal = sectionB.reduce((s, r) => s + r.value, 0);
 
